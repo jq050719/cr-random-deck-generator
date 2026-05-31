@@ -1,8 +1,9 @@
 import random
 from cards import cards
+from card import Rarity
 from tower_troops import tower_troops
 
-def generate_deck() -> list:
+def generate_deck() -> list[str]:
     deck = []
     num_champions = 0
 
@@ -12,12 +13,12 @@ def generate_deck() -> list:
         if card.name in deck:
             continue
 
-        if card.rarity == "Champion" and num_champions == 2:
+        if card.rarity == Rarity.CHAMPION and num_champions == 2:
             continue
 
         deck.append(card.name)
 
-        if card.rarity == "Champion":
+        if card.rarity == Rarity.CHAMPION:
             num_champions += 1
 
     tower_troop = random.choice(tower_troops)
