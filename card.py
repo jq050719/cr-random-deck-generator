@@ -1,12 +1,14 @@
 from dataclasses import dataclass
+from enum import Enum
 
-@dataclass
+class Rarity(Enum):
+    COMMON = "Common"
+    RARE = "Rare"
+    EPIC = "Epic"
+    LEGENDARY = "Legendary"
+    CHAMPION = "Champion"
+
+@dataclass(frozen=True)
 class Card:
     name: str
-    rarity: str
-
-    def get_name(self):
-        return self.name
-
-    def get_rarity(self):
-        return self.rarity
+    rarity: Rarity
