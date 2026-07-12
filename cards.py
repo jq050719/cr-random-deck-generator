@@ -117,6 +117,7 @@ cards = [
     Card("Spirit Empress", Rarity.LEGENDARY),
     Card("Lava Hound", Rarity.LEGENDARY),
     Card("Mega Knight", Rarity.LEGENDARY),
+    Card("Ronin", Rarity.LEGENDARY),
 
     Card("Little Prince", Rarity.CHAMPION),
     Card("Mighty Miner", Rarity.CHAMPION),
